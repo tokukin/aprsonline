@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>HAM</title>
+    <link href="{{ url_for('static', filename='daisyUI/daisyui@5.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='aprs.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    {% include 'components/nav.html' %}
+
+
+    <div id="aprs-container">
+        <div id="map-container"></div>
+        <div id="aprs-info">
+            <div id="aprs-info-content">
+                <div class="aprs-info-title">
+                    <div>APRS Info</div>
+                    <div class="aprs-info-second">(点击地图上的图标显示详情)</div>
+                </div>
+
+                <div class="aprs-info-index">
+                    <div class="aprs-info-key">呼号：</div>
+                    <div class="aprs-info-callsign"> 暂未选择</div>
+                </div>
+                <div class="aprs-info-index">
+                    <div class="aprs-info-key">通播时间：</div>
+                    <div class="aprs-info-create-time">暂未选择</div>
+                </div>
+
+                <div class="aprs-info-index">
+                    <div class="aprs-info-key">位置：</div>
+                    <div class="aprs-info-location">暂未选择</div>
+                </div>
+                <div class="aprs-info-index-comment">
+                    <div class="aprs-info-key">备注：</div>
+                    <div class="aprs-info-comment">暂未选择</div>
+                </div>
+            </div>
+            <div id="aprs-info-search">
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" required placeholder="输入呼号查询" />
+
+                </label>
+                <button class="btn btn-info" id="aprs-search-clear-all">清除图层只显示查询结果</button>
+                <button class="btn btn-warning" id="aprs-search-no-clear">查询不清除图层</button>
+                <button class="btn btn-success" id="aprs-search-del">全量显示</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    {% include 'components/footer.html' %}
+    <script src="{{ url_for('static', filename='daisyUI/browser@4.js') }}"></script>
+    <script src="https://webapi.amap.com/loader.js"></script>
+    <script src="{{ url_for('static', filename='goordtransform.js') }}"></script>
+    <script src="{{ url_for('static', filename='aprs.js') }}"></script>
+</body>
+
+</html>

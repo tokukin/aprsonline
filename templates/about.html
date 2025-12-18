@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>HAM</title>
+    <link href="{{ url_for('static', filename='daisyUI/daisyui@5.css') }}" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1', // 主色调-紫蓝
+                        secondary: '#EC4899', // 辅助色-粉色
+                        dark: '#0F172A',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+    {% include 'components/nav.html' %}
+
+    <div id="about-container">
+
+
+        <h1>关于</h1>
+        <p>纯属个人项目，不涉及任何商业用途。</p>
+        <p>如有问题，可邮件联系：lidexin911@126.com</p>
+
+
+    </div>
+
+
+    {% include 'components/footer.html' %}
+
+
+
+
+    <script src="{{ url_for('static', filename='daisyUI/browser@4.js') }}"></script>
+
+
+
+</body>
+<style>
+    #about-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+</style>
+
+</html>

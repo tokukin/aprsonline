@@ -1,0 +1,183 @@
+/* 1. 全局变量：定义在:root（等价于html选择器，全局生效） */
+:root {
+  /* 颜色变量 */
+
+  --primary-color: #4aadeb; /* 主色调 */
+  --secondary-color: #e35087; /* 辅助色 */
+  --accent-color: #fff254; /* 强调色 */
+  --color-info: #51a7bf; /* 强调色2 */
+
+  --text-color: #333; /* 文本色 */
+  /* 尺寸变量 */
+  --base-padding: 16px; /* 基础内边距 */
+  --border-radius: 8px; /* 圆角 */
+  --font-size: 14px; /* 基础字体大小 */
+  /* 阴影/边框变量 */
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --border: 1px solid #eee;
+
+  --aprs-color1: #ffb129;
+  --aprs-color2: #53d2dc;
+  --aprs-color3: #4f8fc0;
+  --aprs-color4: #289b7c;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* 关键：隐藏全局滚动条 */
+}
+#aprs-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+}
+
+#map-container {
+  position: relative; /* 必须！否则子元素的绝对定位会相对于整个页面 */
+  width: 69%;
+  height: 100%;
+  background-color: #e4e2e2;
+}
+
+#aprs-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+#aprs-info-content {
+  height: 50%;
+  /* background-color: #e4dfdf; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--base-padding);
+  gap: 10px;
+}
+.aprs-info-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--aprs-color1);
+  height: 15%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.aprs-info-second {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--aprs-color2);
+}
+
+.aprs-info-index {
+  width: 100%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  /* color:  var(--aprs-color3); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-index-comment {
+  width: 100%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  /* color:  var(--aprs-color3); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aprs-info-key {
+  width: 30%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  font-weight: bold;
+  color: var(--aprs-color3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-callsign {
+  width: 50%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  font-weight: bolder;
+  color: var(--aprs-color4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-create-time {
+  width: 50%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  color: var(--aprs-color4);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-message {
+  width: 50%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  color: var(--aprs-color4);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-location {
+  width: 50%;
+  /* height: 20px; */
+  font-size: var(--font-size);
+  color: var(--aprs-color4);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aprs-info-comment {
+  width: 70%;
+  font-weight: bold;
+  height: 50px;
+  font-size: 10px;
+  color: var(--aprs-color4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap; /* 保留空格，超出自动换行 */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#aprs-info-search {
+  height: 40%;
+  background-color: #28c574;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

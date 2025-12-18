@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>HAM</title>
+    <link href="{{ url_for('static', filename='daisyUI/daisyui@5.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='fmo.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- <div class="toast">
+        <div class="alert alert-info">
+            <span>New message arrived.</span>
+        </div>
+    </div>
+    <div class="toast toast-top toast-center">
+        <div class="alert alert-info">
+            <span>New mail arrived.</span>
+        </div>
+        <div class="alert alert-success">
+            <span>Message sent successfully.</span>
+        </div>
+    </div>
+    <div class="toast toast-top toast-end">
+        <div class="alert alert-info">
+            <span>New mail arrived.</span>
+        </div>
+        <div class="alert alert-success">
+            <span>Message sent successfully.</span>
+        </div>
+    </div> -->
+
+
+    {% include 'components/nav.html' %}
+
+
+    <div class="page-container">
+
+
+
+        <div id="station_all">
+            <ul class="list bg-base-100 " id="stationlist_left">
+                <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">FMO站点列表</li>
+            </ul>
+            <ul class="list bg-base-100" id="stationlist_right">
+                <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">FMO站点列表</li>
+            </ul>
+        </div>
+        <!-- 右半页：可滚动区域 -->
+        <div class="scroll-area">
+            <div id="map-container">
+                <div id="reload_fmo_info">
+                    <div class="mr-4 text-sm" id="auto-refresh-tip">
+                        自动刷新：<span id="countdown">15</span>秒后
+                    </div>
+                    <!-- 暂停/恢复按钮 -->
+                    <button class="btn btn-soft btn-accent mr-2" id="toggle-auto-refresh">
+                        暂停刷新
+                    </button>
+                    <!-- 原有刷新按钮 -->
+                    <button class="btn btn-soft btn-accent" onclick="reload_fmo_date()" id="reload_fmo_button">
+                        手动刷新
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='daisyUI/browser@4.js') }}"></script>
+    <script src="https://webapi.amap.com/loader.js"></script>
+    <script src="{{ url_for('static', filename='goordtransform.js') }}"></script>
+    <script src="{{ url_for('static', filename='fmo.js') }}"></script>
+
+</body>
+
+</html>
