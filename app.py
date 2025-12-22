@@ -6,21 +6,21 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html', name = "HAM")
+    return render_template('index.html', name = "HAM工具箱")
 
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', person=name)
 
 
-@app.route('/ham')
+@app.route('/hamcall')
 def ham():
-    return render_template('ham.html', name = "HAM")   
+    return render_template('hamcall.html', name = "HAM通信器")   
 
 
-@app.route('/fmo')
+@app.route('/fmomap')
 def fmo():
-    return render_template('fmo.html', name = "FMO")   
+    return render_template('fmomap.html', name = "FMO")   
 
 @app.route('/about')
 def about():
@@ -28,9 +28,9 @@ def about():
 
 
 
-@app.route('/aprs')
+@app.route('/aprsmap')
 def aprs():
-    return render_template('aprs.html', name = "APRS")   
+    return render_template('aprsmap.html', name = "APRS")   
 
 
 
