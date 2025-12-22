@@ -219,7 +219,7 @@ function renderTable(data) {
   }
 
   tableBody1.innerHTML = `<li class="p-4 pb-2 text-xs opacity-60 tracking-wide">FMO站点列表</li>${rowHtml1}`;
-  tableBody2.innerHTML = `<li class="p-4 pb-2 text-xs opacity-60 tracking-wide">FMO站点列表</li>${rowHtml2}`;
+  tableBody2.innerHTML = `<li class="p-4 pb-2 text-xs opacity-60 tracking-wide">只显示24小时内上线服务器</li>${rowHtml2}`;
 
   button_reload.innerHTML = "刷新数据";
   button_reload.disabled = false;
