@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HAM</title>
-    <link href="static/daisyUI/daisyui@5.css" rel="stylesheet" type="text/css" />
-    <link href="static/ham.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <script src="static/daisyUI/browser@4.js"></script>
-    <script src="static/mqtt.min.js"></script>
-    <script src="static/ham.js"></script>
-    <div id="container">
-        <div id="ham-container">
-            <div id="ham-header">
-                <div id="ham-header-left">
-                     <div id="header-item-name">设备信息状态显示区</div>
-                     <div class="header-item-info">
-                        <div class="header-item-info-title">本机呼号</div>
-                        <div id="ham-header-call-sign">BG9AAA</div>
-                        <div class="header-item-info-title-status">设备状态</div>
-                        <div id="ham-header-equpment-status">在线</div>
-                     </div>
-                     
-                     <div class="header-item-info">
-                       <div class="header-item-info-title">服务器</div>
-                        <div id="ham-header-equpment-server">FMO</div>
-                        <div class="header-item-info-title-status">服务器状态</div>
-                        <div id="ham-header-server-status">正常</div>
-                     </div>
-                     <div class="header-item-info">
-                       <div class="header-item-info-title">信息流</div>
-                        <div id="ham-header-message-up-status">上⬆</div>
-                        <div id="ham-header-message-status">BG9AAA -> BG9BBB</div>
-                        <!-- <div id="ham-header-message-status"></div> -->
-                       
-                     </div>
-                     
-                </div>
-                <div id="ham-header-right">
-                     
-                </div>
-               
-            </div>
-            <div id="ham-content">
-                <p>HAM is a simple ham radio control system.</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAM</title>
+  <link href="{{ url_for('static', filename='daisyUI/daisyui@5.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='ham.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="{{ url_for('static', filename='daisyUI/browser@4.js') }}"></script>
+  <script src="{{ url_for('static', filename='mqtt.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='ham.js') }}"></script>
+  <div id="container">
+    <div id="ham-container">
+      <div id="ham-header">
+        <div id="ham-header-left">
+          <div id="header-item-name">设备信息状态显示区</div>
+          <div class="header-item-info">
+            <div class="header-item-info-title">本机呼号</div>
+            <div id="ham-header-call-sign">BG9AAA</div>
+            <div class="header-item-info-title-status">设备状态</div>
+            <div id="ham-header-equpment-status">在线</div>
+          </div>
+
+          <div class="header-item-info">
+            <div class="header-item-info-title">服务器</div>
+            <div id="ham-header-equpment-server">FMO</div>
+            <div class="header-item-info-title-status">服务器状态</div>
+            <div id="ham-header-server-status">正常</div>
+          </div>
+          <div class="header-item-info">
+            <div class="header-item-info-title">信息流</div>
+            <div id="ham-header-message-up-status">上⬆</div>
+            <div id="ham-header-message-status">BG9AAA -> BG9BBB</div>
+            <!-- <div id="ham-header-message-status"></div> -->
+
+          </div>
+
         </div>
-        <div id="ham-footer">
-            
-                <div>HAM@2026</div>
-                <div>ALL RIGHTS RESERVED</div>
-                <div>备案</div>
-                
-            
+        <div id="ham-header-right">
+
         </div>
+
+      </div>
+      <div id="ham-content">
+        <p>HAM is a simple ham radio control system.</p>
+      </div>
+    </div>
+    <div id="ham-footer">
+
+      <div>HAM@2026</div>
+      <div>ALL RIGHTS RESERVED</div>
+      <div>备案</div>
+
 
     </div>
-      
+
+  </div>
+
 </html>
